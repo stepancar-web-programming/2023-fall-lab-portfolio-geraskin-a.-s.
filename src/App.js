@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { Suspense, lazy, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import "./App.css";
 import DotsBar from "./components/DotsBar";
@@ -7,6 +7,8 @@ import SliderBody from "./components/SliderBody";
 import SwitchButton from "./components/SwitchButton";
 import dataSlider from "./dataSlider";
 import manPict from "./sources/imgs/man.png";
+
+const LazyFooter = lazy(() => import('./components/Footer'))
 
 function App() {
     const { t, i18n } = useTranslation()
@@ -206,13 +208,9 @@ function App() {
                 </div>
             </div>
 
-            <div className="footer__container">
-                <div className="footer-body__container">
-                    <div className="footer-initials">{t('footer-initials')}</div>
-                    <div className="footer-year">2023</div>
-                    <div className="footer-email">leha.geraskin.80@gmail.com</div>
-                </div>
-            </div>
+            <Suspense fallback={<div>Loading...</div>}>
+                <LazyFooter footerInitialsText={t('footer-initials')}/>
+            </Suspense>
         </div>
     );
 }
