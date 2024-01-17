@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import SliderBody from './SliderBody';
 import DotsBar from './DotsBar';
+import classes from './UI/Slider.module.css';
 
 const Slider = ( {dataSlider} ) => {
     const [slideIndex, setSlideIndex] = useState(0)
@@ -19,14 +20,14 @@ const Slider = ( {dataSlider} ) => {
     }
 
     return (
-        <div className="slider">
-            <div className="slider">
+        <div className={classes.slider}>
+            <div className={classes.slider}>
                 <button
                     onClick={() => moveSlide(-1)}
                     style={slideIndex > 0 
                         ? {visibility: 'visible'}
                         : {visibility: 'hidden'}}
-                    className="slider-btn">Left
+                    className={classes.slider-btn}>Left
                 </button>
                 <SliderBody
                     array={dataSlider}
@@ -39,7 +40,7 @@ const Slider = ( {dataSlider} ) => {
                     style={slideIndex < dataSlider.length - 1 
                         ? {visibility: 'visible'}
                         : {visibility: 'hidden'}} 
-                    className="slider-btn">Right
+                    className={classes.slider-btn}>Right
                 </button>
             </div>
             <DotsBar
