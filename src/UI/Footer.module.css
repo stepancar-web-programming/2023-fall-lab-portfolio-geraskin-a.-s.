@@ -1,0 +1,32 @@
+.footer__container {
+    margin-top: 229px;
+    max-width: 1820px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.footer__container::before {
+    content: '';
+    width: 1526px;
+    position: absolute;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.45);
+    top: -38px;
+}
+
+.footer-body__container {
+    padding: 0 226px 0 217px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-body__container > * {
+    color: rgba(255, 255, 255, 0.33);
+    font-family: Gilroy;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 100%;
+}
