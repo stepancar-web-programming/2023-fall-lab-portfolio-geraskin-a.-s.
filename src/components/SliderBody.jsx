@@ -1,5 +1,5 @@
 import React from 'react';
-import classe from './UI/SliderBody.module.css';
+import classes from './UI/SliderBody.module.css';
 
 const SliderBody = ({index, fadeState, fadeDuration}) => {
 
