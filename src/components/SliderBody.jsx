@@ -1,10 +1,11 @@
 import React from 'react';
+import classe from './UI/SliderBody.module.css';
 
 const SliderBody = ({index, fadeState, fadeDuration}) => {
 
     return (
         <div
-            className={`slider-body ${fadeState}`}
+            className={classes.slider-body ${fadeState}}
             style={{transitionDuration: `${fadeDuration}ms`}}
         > 
             <img
