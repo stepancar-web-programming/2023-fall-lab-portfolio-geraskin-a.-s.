@@ -1,0 +1,6 @@
+.slider-body {
+    transition: opacity ease-in-out;
+}
+.slider-body > img {
+    border-radius: 34px;
+}
