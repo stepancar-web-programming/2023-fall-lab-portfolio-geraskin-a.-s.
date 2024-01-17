@@ -1,5 +1,6 @@
 import React from 'react';
 import Dot from './Dot';
+import classes from './UI/DotsBar.module.css';
 
 const DotsBar = ({array, func, currentSlide}) => {
     const countSlides = array.length
@@ -16,7 +17,7 @@ const DotsBar = ({array, func, currentSlide}) => {
         return dots
     }
     return (
-        <div className="dots-bar">{dotsRender()}</div>
+        <div className={classes.dots-bar}>{dotsRender()}</div>
     )
 };
 
