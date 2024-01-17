@@ -1,11 +1,12 @@
 import React from 'react';
+import classes from './UI/SwitchButton.module.css';
 
 const SwitchButton = ({changeLangFunc, lang}) => {
     return (
-        <label className="language-btn switch">
+        <label className={classes.language-btn classes.switch}>
             <input type="checkbox"/>
-            <div className='slider' onClick={() => changeLangFunc(lang)}></div>
-            <div className={`language-title ${lang === 'ru' ? 'activated' : ''}`}>{lang}</div>
+            <div className={classes.slider} onClick={() => changeLangFunc(lang)}></div>
+            <div className={classes.language-title ${lang === 'ru' ? classes.activated : ''}}>{lang}</div>
         </label>
     );
 };
