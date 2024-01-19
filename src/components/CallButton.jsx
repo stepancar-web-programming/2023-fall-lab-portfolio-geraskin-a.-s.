@@ -1,9 +1,9 @@
 import React from 'react';
 
 const CallButton = () => {
+    const phoneNumber = '89854806003';
     const handleCall = () => {
-        const phoneNumber = '89854806003';
-    
+        
         if (window.location.href.startsWith('tel:')) {
             window.location.href = `tel:${phoneNumber}`;
         } else {
