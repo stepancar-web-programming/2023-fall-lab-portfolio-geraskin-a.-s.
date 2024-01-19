@@ -1,12 +1,10 @@
 import React from 'react';
 import classes from './UI/Dot.module.css';
 
-const Dot = ({slideIndex, func, currentSlide}) => {
+const Dot = () => {
     return (
-        <div
-            className={classes.dot ${slideIndex === currentSlide ? classes.dot-active : ''}}
-            onClick={() => func(slideIndex > currentSlide ? slideIndex - currentSlide : slideIndex - currentSlide)}
-        >
+        <div className={classes.dot}>
+            
         </div>
     );
 };
