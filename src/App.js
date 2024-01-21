@@ -15,7 +15,6 @@ function App() {
     const [language, setLanguage] = useState('en')
     const [slideIndex, setSlideIndex] = useState(0)
     const [fadeState, setFadeState] = useState('fade-in')
-    const [time, setTime] = useState(0)
     const fadeDuration = 300
 
     const changeLanguage = (language) => {
