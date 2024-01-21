@@ -8,10 +8,10 @@ const DotsBar = ({array, func, currentSlide}) => {
     const dotsRender = () => {
         const dots = Array.from({length: countSlides}).map((_, i) => (
             <Dot
-                    slideIndex={i}
-                    func={func}
-                    currentSlide={currentSlide}
-                    key={`dot-${i}`}
+                slideIndex={i}
+                func={func}
+                currentSlide={currentSlide}
+                key={`dot-${i}`}
             />
         ))
         return dots
