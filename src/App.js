@@ -45,6 +45,10 @@ function App() {
             
         }, fadeDuration);
         
+        const clearSlideInterval = () => {
+            clearInterval(intervalId);
+        };
+        
         setTimeout(() => {
             clearSlideInterval();
         }, fadeDuration);
