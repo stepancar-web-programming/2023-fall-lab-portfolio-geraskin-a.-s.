@@ -15,7 +15,6 @@ function App() {
     const [language, setLanguage] = useState('en')
     const [slideIndex, setSlideIndex] = useState(0)
     const [fadeState, setFadeState] = useState('fade-in')
-    const [autoMoveSlideTime, setAutoMoveSlideTime] = useState(0)
     const [time, setTime] = useState(0)
     const fadeDuration = 300
 
@@ -36,14 +35,20 @@ function App() {
     }, [])
     
     const moveSlide = (move) => {
-        const autoMoveSlideTimer = setTimeout(() => {
-            setSlideIndex(slideIndex + move)
-            setFadeState('fade-in')
-        }, fadeDuration)
-        clearTimeout(autoMoveSlideTime)
-        setFadeState('fade-out')
-        setTime(autoMoveSlideTimer)
-    }
+        const intervalId = setInterval(() => {
+            setSlideIndex(slideIndex + move);
+            setFadeState('fade-in');
+    
+            setTimeout(() => {
+                setFadeState('fade-out');
+            }, fadeDuration);
+            
+        }, fadeDuration);
+        
+        setTimeout(() => {
+            clearSlideInterval();
+        }, fadeDuration);
+    };
 
     return (
         <div className="App">
