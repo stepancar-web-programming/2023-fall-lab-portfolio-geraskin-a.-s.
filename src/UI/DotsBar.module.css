@@ -1,0 +1,5 @@
+.dots-bar {
+    display: flex;
+    position: absolute;
+    bottom: 22px;
+}
